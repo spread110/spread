@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: spread-backend
+    env: node
+    buildCommand: cd backend && npm install
+    startCommand: cd backend && npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: MONGODB_URI
+        value: mongodb://spreadnow4:RjRCKDUiHjAGCPw7@ac-gnsbh8b-shard-00-00.spu4tko.mongodb.net:27017,ac-gnsbh8b-shard-00-01.spu4tko.mongodb.net:27017,ac-gnsbh8b-shard-00-02.spu4tko.mongodb.net:27017/?replicaSet=atlas-lpsyvn-shard-0&ssl=true&authSource=admin&retryWrites=true&w=majority&appName=Spread
+      - key: JWT_SECRET
+        value: spread-secret-123456789
+      - key: JWT_EXPIRE
+        value: 30d
+      - key: FIREBASE_PROJECT_ID
+        value: spread-d2c62
+      - key: FIREBASE_PRIVATE_KEY
+        value: "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCh2VZFzR9Oh7+p\nvM6HmKQvY5ppOhug+0XJUH8I84WW8Ru8Roww41CEktbZr9PNFgzTCBUTrnjMFewR\nA7j144yn0oPvIwCM2yRYKcMsD+NtmnzAB9u08jEVhR0PO5WN9C8FrLJsfKU52I6d\noOzabq/aFCb5eqVlZbhVwCes6s8UAiOCsL1kIUVh0+6xZ2hLS56qtLKH77V7qG+O\nwkvBOVN1E1ftkHShkf2Lg3FaqtbzO9YzCcFDNhdhMgtnLAKHCBLGjpZOKXQzjCoA\nnOd0lATWwL0AJ6QrxAWRqt5vO3rWwx+ThriLyrclH132uasHoLdWbCzfy6XgH7fm\noeFflYznAgMBAAECggEAC1Pa72th/QzliQY0uEB31p8/Ko04FiYaph0y/u04VNj5\ngCMPOHQNvxxIhZeCQzt/WJ0bXd4bXev3h+CoUdauvKeFt2IjmDgq4jFuE7KQUCv8\nqN4D7l/4YnwHYs5gnbz7i4dLkj85EIQ2cGmCb5lJR9dFkQwYm7D+W/YPxiZFqa3j\nX95lIC2ikVS+HEtA/Tv+DZse8eC7aJm7L2Howbbh+8byJ9/OMLd4B1cmXZM5dFDv\nBv0XOKmaO0DQ3DnodAkqSNmgfwlA+/2dawcG3HpP/XgODcBdi51+bwz0Pjqdpivr\n/HftPAwbsjclwyzUYiSuQoQ86Zvm/G9Szgq6poYQrQKBgQDd8CN/xiWpU6SAHi6Z\n52l8ARUDbELmaG/7xCuQqeZ5Uf5gT6tgILhtSJxChTDQ3OA72mjwjFS/HV8eUKxG\nBKaq3r6qzI5AJt6kD88LKHfqWyJRnbktTdzoFsZXYow9n8InNp0h2ScA5+N6Vh/G\nmrB7ZjKIhauiGtW+LpCC4bc4awKBgQC6sFJXP9KoZqrFLxDPeqo5RS40y90IcyTk\nlLc5ZVmozxkjZudWPT5ReWl7pX3ylCxncNWtEtl7MVHTqcftqgTaEWWifGIY5uf9\nxSvtrrXgW4/JQvxqKU/TLFy9RRmDB2IJcpAjg0OSUMIb2WJ3wH6doqyzxiQJhOIi\nIAQCkItMdQKBgQCULJ7W0QkV+uUKMJx2Xn0bsHFCHsavpCyXz8oyRGy+tRJ7ZNWL\nUW0wcVj6RIhp+f2vmEuVxmtSSZ7W04+hE7veuuZbjESw6gKdUHyv+23MRtor2Xzn\nlWOWhJYZg48UGZR7r8fK8HtM7IUAiX2fkGmhiYLViUEk8nugBOCwsVgtTwKBgQCf\nmrC6sPDLUgK7U5KenvM6xR9MueF9INuwpEfExRYTEQMf1hD/FJrbkt4QfJqhsfYI\ndVnofo36GV8ogyVO1aUSPf9TG93OBlLeDRySNmR9rCnQWflsVWdOVcXvdkzqTXyO\nMShzg/xX8b0RjBb35FUbNYFKrKIQlU+y9wYWnzbIJQKBgHStgqYKyyTWQf9lzGeI\n67ipPDEe5BeSIonMEw/0eNEkxSyk7s21L2NWf4SZa6qZaOUjlyDJ27VadcogIJqV\nyHIhjQDCZO+rFcFujKzMGrgbWGznuASHUd96buZ9dd3ohsSkP3CSLCKS+6rN9gM0\nDtekgJ/zrH53FfeyggCMnHoT\n-----END PRIVATE KEY-----\n"
+      - key: FIREBASE_CLIENT_EMAIL
+        value: firebase-adminsdk-fbsvc@spread-d2c62.iam.gserviceaccount.com 
