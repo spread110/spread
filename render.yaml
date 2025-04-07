@@ -2,14 +2,15 @@ services:
   - type: web
     name: spread-backend
     env: node
-    buildCommand: cd backend && npm install
-    startCommand: cd backend && npm start
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: npm start
     envVars:
       - key: NODE_ENV
         value: production
       - key: PORT
         value: 10000
-      - key: MONGODB_URI
+      - key: MONGO_URI
         value: mongodb://spreadnow4:RjRCKDUiHjAGCPw7@ac-gnsbh8b-shard-00-00.spu4tko.mongodb.net:27017,ac-gnsbh8b-shard-00-01.spu4tko.mongodb.net:27017,ac-gnsbh8b-shard-00-02.spu4tko.mongodb.net:27017/?replicaSet=atlas-lpsyvn-shard-0&ssl=true&authSource=admin&retryWrites=true&w=majority&appName=Spread
       - key: JWT_SECRET
         value: spread-secret-123456789
