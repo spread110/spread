@@ -1,74 +1,94 @@
-# Spread - Delivery App
+# Spread - Food Delivery App
 
-A React Native mobile application for delivery services with a clean white design and black buttons.
+A modern food delivery application built with React Native, Firebase, and MongoDB.
 
 ## Features
 
-- Phone authentication with OTP verification
-- Browse products by categories (Food, Groceries, Electronics, etc.)
-- View product details with add to cart functionality
-- Shopping cart management
-- Checkout process
-- Address management
-- Order tracking and history
-- User profile management
+- User Authentication with Firebase
+- Real-time Order Tracking
+- Push Notifications
+- Payment Integration (Razorpay)
+- Location-based Services
+- Socket.IO for Real-time Updates
 
 ## Tech Stack
 
-- React Native with Expo
-- React Navigation for navigation
-- Context API for state management
-- Axios for API calls (with mock data for development)
+- **Frontend**: React Native, Expo
+- **Backend**: Node.js, Express
+- **Database**: MongoDB
+- **Authentication**: Firebase
+- **Real-time**: Socket.IO
+- **Payments**: Razorpay
+- **Maps**: Google Maps SDK
+- **Notifications**: Firebase Cloud Messaging
 
-## Getting Started
+## Project Structure
+
+```
+spread/
+├── backend/           # Node.js backend
+│   ├── config/       # Configuration files
+│   ├── models/       # MongoDB models
+│   ├── routes/       # API routes
+│   └── server.js     # Express server
+├── src/              # React Native source
+│   ├── components/   # Reusable components
+│   ├── config/       # App configuration
+│   ├── context/      # React Context
+│   ├── screens/      # App screens
+│   └── services/     # API services
+└── assets/           # Images and other assets
+```
+
+## Setup Instructions
 
 ### Prerequisites
 
-- Node.js (v12 or higher)
+- Node.js (v14.x or higher)
 - npm or yarn
 - Expo CLI
-- Expo Go app on your mobile device or an Android/iOS emulator
+- MongoDB Atlas account
+- Firebase project
+- Razorpay account
 
 ### Installation
 
 1. Clone the repository:
-```bash
-git clone https://github.com/yourusername/spread.git
-cd spread
-```
+   ```bash
+   git clone https://github.com/spread110/spread.git
+   cd spread
+   ```
 
 2. Install dependencies:
-```bash
-npm install
-# or
-yarn install
-```
+   ```bash
+   # Install frontend dependencies
+   npm install
 
-3. Start the development server:
-```bash
-npm start
-# or
-yarn start
-```
+   # Install backend dependencies
+   cd backend
+   npm install
+   ```
 
-4. Scan the QR code with Expo Go app (Android) or Camera app (iOS) to run the app on your device, or run on an emulator.
+3. Configure environment variables:
+   - Copy `.env.example` to `.env` in both root and backend directories
+   - Fill in your configuration values
 
-## Development
+4. Start the development server:
+   ```bash
+   # Start backend
+   cd backend
+   npm run dev
 
-The app is set up to use mock data for development. You can find the mock data in `src/services/mockData.js`. To switch to real API calls, change the `USE_MOCK_DATA` flag to `false` in `src/services/api.js`.
+   # Start frontend (in a new terminal)
+   npm start
+   ```
 
-### Folder Structure
+## Deployment
 
-- `/src/screens`: All app screens
-- `/src/components`: Reusable UI components
-- `/src/navigation`: Navigation configuration
-- `/src/services`: API and service functions
-- `/src/context`: Context providers for state management
-- `/src/assets`: Images, icons and other assets
-
-## Authentication Flow
-
-The app uses phone number authentication with OTP verification. For development, any phone number and OTP will work.
+The application is deployed on:
+- Frontend: Expo
+- Backend: Render
+- Database: MongoDB Atlas
 
 ## Contributing
 
@@ -80,10 +100,10 @@ The app uses phone number authentication with OTP verification. For development,
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgments
 
 - [React Native](https://reactnative.dev/)
 - [Expo](https://expo.dev/)
-- [React Navigation](https://reactnavigation.org/) 
+- [React Navigation](https://reactnavigation.org/)
